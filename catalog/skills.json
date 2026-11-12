@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "maintainer": "18523",
+  "updated": "2026-11-12",
+  "skills": [
+    {
+      "name": "refactoring-ui",
+      "path": "refactoring-ui",
+      "summary": "Web UI 的规则书与诊断层：层级、间距、排版、配色对比度、阴影、空状态、设计 token",
+      "tags": [
+        "ui",
+        "design",
+        "css",
+        "tailwind",
+        "design-tokens",
+        "accessibility",
+        "设计",
+        "界面",
+        "配色",
+        "评审"
+      ],
+      "source": {
+        "type": "github",
+        "url": "https://github.com/edisonmbli/refactoring-ui-skill",
+        "ref": "main",
+        "upstreamVersion": "2026-08-21"
+      },
+      "version": "2026-08-21",
+      "license": "MIT",
+      "requires": {
+        "python": "3.10+（仅 scripts/ 下三个 stdlib 脚本需要）",
+        "packages": []
+      },
+      "notes": "上游 SKILL.md 的 frontmatter 是非法 YAML（description 里含 `Chinese: ` 未加引号），本地已改为加引号字符串；重新下载后需再修一次。已补 ATTRIBUTION.md 与 LICENSE。",
+      "added": "2026-11-05"
+    },
+    {
+      "name": "ppt-master",
+      "path": "ppt-master",
+      "summary": "从大纲/讲稿生成可编辑 PPTX 的完整工作流：SVG 分页、质量门、导出、可选配音",
+      "tags": [
+        "ppt",
+        "pptx",
+        "slides",
+        "deck",
+        "presentation",
+        "office",
+        "演示",
+        "幻灯片",
+        "排版"
+      ],
+      "source": {
+        "type": "github",
+        "url": "https://github.com/hugohe3/ppt-master",
+        "ref": "main",
+        "upstreamVersion": "6.7.3"
+      },
+      "version": "6.7.3",
+      "license": "MIT",
+      "requires": {
+        "python": "3.11+（用 D:\\AI\\python）",
+        "packages": [
+          "PyYAML",
+          "python-pptx",
+          "XlsxWriter",
+          "skia-pathops",
+          "uharfbuzz",
+          "edge-tts",
+          "mammoth",
+          "markdownify",
+          "ebooklib",
+          "nbconvert",
+          "openpyxl",
+          "Pillow",
+          "numpy",
+          "requests",
+          "beautifulsoup4",
+          "flask"
+        ]
+      },
+      "notes": "SKILL.md 要求先跑 scripts/attribution_guard.py，非零即停。导出阶段会用 mkdtemp 建 0700 目录，沙箱受限身份下会 PermissionError，需要完全权限或普通终端执行。",
+      "added": "2026-10-23"
+    }
+  ]
+}
